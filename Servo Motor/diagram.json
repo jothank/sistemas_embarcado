@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Jonathan Jonathan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 25.8, "left": 204.4, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 23.56, "left": -96.06, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": -223.37,
+      "left": 169.44,
+      "rotate": 180,
+      "attrs": {}
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -94.04, "left": 281.45, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:5V", "bb1:tn.1", "red", [ "v80.96", "h150.2", "v-247.92" ] ],
+    [ "uno:GND.2", "bb1:tp.1", "black", [ "v67.37", "h127.1", "v-244.33" ] ],
+    [ "uno:A0", "bb1:7b.j", "green", [ "v0" ] ],
+    [ "bb1:7b.f", "bb1:7t.e", "green", [ "v0" ] ],
+    [ "bb1:7t.c", "bb1:10t.c", "green", [ "v0" ] ],
+    [ "bb1:10t.b", "pot1:SIG", "green", [ "v0" ] ],
+    [ "bb1:tp.7", "pot1:GND", "green", [ "v0" ] ],
+    [ "bb1:tn.10", "pot1:VCC", "green", [ "v0" ] ],
+    [ "bb1:tn.25", "servo1:V+", "green", [ "v0" ] ],
+    [ "bb1:tp.24", "servo1:GND", "green", [ "v0" ] ],
+    [ "uno:3", "servo1:PWM", "green", [ "v-275.48", "h268.75" ] ]
+  ],
+  "dependencies": {}
+}
