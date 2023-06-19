@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "author": "Jonathan Jonathan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 237, "left": -16.4, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "rotate": 180, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 292.77,
+      "left": 85.85,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 299.2,
+      "left": 129,
+      "rotate": 180,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-slide-potentiometer",
+      "id": "pot2",
+      "top": -173.94,
+      "left": -0.66,
+      "rotate": 90,
+      "attrs": { "travelLength": "30" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.1", "bb1:16t.a", "black", [ "v34.02", "h-4.9" ] ],
+    [ "uno:3", "bb1:9t.a", "green", [ "v28.27", "h39.4" ] ],
+    [ "r1:1", "bb1:9t.b", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:15t.b", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:15t.c", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:16t.c", "", [ "$bb" ] ],
+    [ "uno:GND.3", "pot2:GND", "black", [ "v0" ] ],
+    [ "uno:5V", "pot2:VCC", "red", [ "v-21.09", "h38.41", "v-214.35" ] ],
+    [ "uno:A0", "pot2:SIG", "green", [ "h-7.09", "v-235.44" ] ]
+  ],
+  "dependencies": {}
+}
