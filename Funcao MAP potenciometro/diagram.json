@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Jonathan Jonathan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": -223.8, "left": -35.6, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 11.1, "left": 11.1, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -35.29,
+      "left": 339.32,
+      "rotate": 90,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "pot1:VCC", "bb1:bp.25", "red", [ "h-20.82", "v36.15", "h100.42", "v-96.05", "h-162.22" ] ],
+    [ "pot1:GND", "bb1:bn.25", "black", [ "h0" ] ],
+    [ "uno:5V", "bb1:bp.1", "red", [ "v38.28", "h-224.92", "v-278.38" ] ],
+    [ "uno:GND.1", "bb1:bn.1", "black", [ "h0.2", "v-17.18", "h-128.4" ] ],
+    [ "pot1:SIG", "uno:A0", "gold", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
